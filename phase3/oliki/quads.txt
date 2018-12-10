@@ -1,0 +1,2 @@
+#quad        opcode       result       arg1         arg2        
+0            2            _t0          3.000000     2.000000    
