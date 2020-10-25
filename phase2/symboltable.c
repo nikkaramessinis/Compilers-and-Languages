@@ -93,7 +93,7 @@ int LookUpLibFunc(char *name, int localFlag, int line) {
 	}
 	
 }
-
+/* Check whether the function is already in the symbol table and active and return 1 if that is the case 0 otherwise*/
 int LookUp(char *name, int scope, int line, int localFlag) {
 	
 	LinkedListScope *tmp = headList;
