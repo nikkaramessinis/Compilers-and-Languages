@@ -1,3 +1,6 @@
 Stavroula Stavropierrakou 3302
 Giannis Makropodis	3322
 Nikos Sarantis-Karamesinis 3335
+
+In this phase we are receiving normal text and organizing it in corresponding tokens. So for example we are classifying any grouping of digits  (i.e., [0-9]+) as INT. 
+Classifying keywords, punctuation points, operators, identifiers, real numbers, integers, whitespaces (category) saving line_number and token number to then output this stream of tokens to yacc in the next phase.
