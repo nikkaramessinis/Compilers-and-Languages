@@ -62,36 +62,27 @@ void insertError(char *error, const char *token, int line){
 int LookUpLibFunc(char *name, int localFlag, int line) {
 	
 	int flag = 0;
-
+	if (strcmp(name , "print") == 0) flag = 1;
+	else if (strcmp(name , "input") == 0) flag = 1;
+	else if (strcmp(name , "objectmemberkeys" ) == 0) flag = 1;
+	else if (strcmp(name , "objecttotalmembers") == 0) flag = 1;
+	else if (strcmp(name , "objectcopy") == 0) flag = 1;
+	else if (strcmp(name , "argument" ) == 0) flag = 1;
+	else if (strcmp(name , "totalarguments") == 0) flag = 1;
+	else if (strcmp(name , "typeof") == 0) flag = 1;
+	else if (strcmp(name , "strtonum" ) == 0) flag = 1;
+	else if (strcmp(name , "sqrt") == 0) flag = 1;
+	else if (strcmp(name , "cos" ) == 0) flag = 1;
+	else if (strcmp(name , "sin") == 0) flag = 1;
 	
-		if (strcmp(name , "print") == 0) flag = 1;
-		else if (strcmp(name , "input") == 0) flag = 1;
-		else if (strcmp(name , "objectmemberkeys" ) == 0) flag = 1;
-		else if (strcmp(name , "objecttotalmembers") == 0) flag = 1;
-		else if (strcmp(name , "objectcopy") == 0) flag = 1;
-		else if (strcmp(name , "argument" ) == 0) flag = 1;
-		else if (strcmp(name , "totalarguments") == 0) flag = 1;
-		else if (strcmp(name , "typeof") == 0) flag = 1;
-		else if (strcmp(name , "strtonum" ) == 0) flag = 1;
-		else if (strcmp(name , "sqrt") == 0) flag = 1;
-		else if (strcmp(name , "cos" ) == 0) flag = 1;
-		else if (strcmp(name , "sin") == 0) flag = 1;
-	
-
 	if(flag == 1 && localFlag == 1){
-	
-			insertError("Error! Trying to shadow library function with token %s in line %d.\n", name, line);
-		
+		insertError("Error! Trying to shadow library function with token %s in line %d.\n", name, line);
 		return 2;
 	}else if(flag == 1 && localFlag == 0){
-		
-			//insertError("Error! Trying to shadow library function with token %s in line %d.\n",name, line);
-		
+		//insertError("Error! Trying to shadow library function with token %s in line %d.\n",name, line);
 		return 1;
-	}else{
-		return 0;
 	}
-	
+        return 0;	
 }
 /* Check whether the function is already in the symbol table and active and return 1 if that is the case 0 otherwise*/
 int LookUp(char *name, int scope, int line, int localFlag) {
