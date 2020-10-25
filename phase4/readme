@@ -1,3 +1,4 @@
 Stavroula Stavropierrakou 3302
 Giannis Makropodis	3322
 Nikos Sarantis-Karamesinis 3335
+This generated a binary file which contains the arrays and instructions (final code) that correspond to the program being compiled. VM then loads the binary file and executes it.
