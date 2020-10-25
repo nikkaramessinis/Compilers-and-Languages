@@ -3,6 +3,7 @@ Giannis Makropodis	3322
 Nikos Sarantis-Karamesinis 3335
 
 
-Taking the tokens of streams to make a parser it in a LALR(Lookahead left-to-right) using yacc/bison. As we are parsing the token of streams we insert if it doesn't already 
-exist in a symbol table (Hashmap using array of pointers to linked lists) information about local, global variables, library and custom functions like scope name line 
+Taking the tokens of streams to make a parser it in a LALR(Lookahead left-to-right) using yacc/bison. As we are parsing the token of streams making sure we increment
+or decrement the scope as identify "{" or "}", we insert if it doesn't already exist in a symbol table (Hashmap using array of pointers to linked lists) information 
+about local, global variables, library and custom functions like scope name line 
 numbers type.
